@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movie_app/DetailsPage.dart';
+import 'package:flutter_movie_app/DetailsAboutMovie/DetailsPage.dart';
 
 import 'movie.dart';
 
@@ -65,7 +65,7 @@ class _MovieAppState extends State<MovieApp> {
   Widget movieCard(BuildContext context, Movie movie){
     Size size = MediaQuery.of(context).size;
     return InkWell(
-      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsPage(movieName: movie.title)));},
+      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsPage(movieName: movie.title, movie: movie,)));},
       child: Container(
         margin: EdgeInsets.only(left: 30),
         width: size.width,
